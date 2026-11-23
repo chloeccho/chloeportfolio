@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chloe Nayeon Cho Portfolio</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%22-36%20-36%2072%2084%22%3E%3Cg%20transform%3D%22rotate%28-12%29%22%3E%3Cpath%20d%3D%22M0%200C-1%209%204%2022%2013%2034%22%20fill%3D%22none%22%20stroke%3D%22%237E9A55%22%20stroke-width%3D%222.6%22%20stroke-linecap%3D%22round%22/%3E%3Cg%20id%3D%22lf%22%3E%3Cpath%20d%3D%22M0-1C-5-6-14-11-14-19C-14-26-6-28%200-21C6-28%2014-26%2014-19C14-11%205-6%200-1Z%22%20fill%3D%22%239DB97A%22/%3E%3Cpath%20d%3D%22M0-3V-17%22%20stroke%3D%22%23F3EFD9%22%20stroke-width%3D%221.1%22%20stroke-linecap%3D%22round%22/%3E%3C/g%3E%3Cuse%20href%3D%22%23lf%22%20transform%3D%22rotate%2890%29%22%20fill%3D%22%23B3C98B%22/%3E%3Cuse%20href%3D%22%23lf%22%20transform%3D%22rotate%28180%29%22/%3E%3Cuse%20href%3D%22%23lf%22%20transform%3D%22rotate%28270%29%22/%3E%3Cpath%20d%3D%22M-2.6-2.6L2.6%202.6M2.6-2.6L-2.6%202.6%22%20stroke%3D%22%23B5697F%22%20stroke-width%3D%221.6%22%20stroke-linecap%3D%22round%22/%3E%3C/g%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Mrs+Saint+Delafield&family=Reenie+Beanie&family=Archivo+Narrow:wght@400;500;600&family=Jost:wght@300;400&display=swap" rel="stylesheet">
+<style>
+/* Layout idea: an olive "record sleeve" cover with handwritten project names, then a grid of close-up sneak peeks; each peek opens its own page with the full work and the process behind it. */
+:root{
+  --olive:#8E9A4C;
+  --khaki:#D5CFAA;
+  --cream:#F3EFD9;
+  --moss:#3D4222;
+  --berry:#A23F6C;
+  --muted:#6E6F4C;
+  --cobalt:#3E5DA6;
+  --rose:#B5697F;
+  --lav:#B9B6CC;
+  --celery:#C9D88F;
+  --sig:"Mrs Saint Delafield", "Snell Roundhand", cursive;
+  --hand:"Reenie Beanie", "Bradley Hand", cursive;
+  --label:"Archivo Narrow", "Arial Narrow", sans-serif;
+  --body:"Jost", "Futura", "Helvetica Neue", sans-serif;
+  --grain:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.24 0 0 0 0 0.26 0 0 0 0 0.13 0 0 0 .22 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  color-scheme: light;
+}
+*{box-sizing:border-box}
+html,body{overflow-x:clip}
+body{margin:0;background:var(--khaki);background-image:var(--grain);color:var(--moss);font-family:var(--body);font-weight:300;font-size:16px;line-height:1.6}
+img{max-width:100%;display:block}
+a{color:inherit}
+a:focus-visible,button:focus-visible{outline:2px solid var(--berry);outline-offset:3px}
+.wrap{max-width:1180px;margin:0 auto;padding:0 clamp(16px,4vw,44px)}
+.label{font-family:var(--label);font-weight:600;font-size:12px;letter-spacing:.16em;text-transform:uppercase}
+.hand{font-family:var(--hand);font-size:24px;line-height:1.1}
+[hidden]{display:none !important}
+
+/* top bar, like the poster's header line */
+.top{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:18px 0;color:var(--berry)}
+.top a{text-decoration:none}
+.top nav{display:flex;gap:clamp(16px,4vw,40px)}
+.top nav a[aria-current="page"]{text-decoration:underline;text-underline-offset:5px}
+.top .home{font-family:var(--sig);font-size:34px;letter-spacing:0;text-transform:none;font-weight:400;line-height:1;color:var(--moss)}
+
+/* ---------- hero ---------- */
+.hero{background:var(--cream);background-image:var(--grain);position:relative;overflow:hidden;padding-bottom:clamp(40px,6vw,72px)}
+.hero-grid{display:grid;grid-template-columns:1.25fr 1fr;gap:clamp(24px,5vw,64px);align-items:center;padding-top:clamp(28px,5vw,64px)}
+.hero .kicker{display:flex;gap:18px;color:var(--berry)}
+.hero h1{margin:6px 0 0;font-family:var(--sig);font-weight:400;font-size:clamp(84px,12.5vw,176px);line-height:.86;color:var(--moss);letter-spacing:-.01em}
+.hero h1 span{display:block;padding-left:1.4em}
+.hero h1 span.mid{padding-left:.6em}
+.hero .sub{font-family:var(--hand);font-size:clamp(26px,3vw,34px);margin:18px 0 0;color:var(--muted)}
+.clovers{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(10px,2vw,22px);width:100%}
+.clovers canvas{width:100%;height:auto;aspect-ratio:3/4}
+.clovers canvas:nth-child(2n){transform:translateY(18px) rotate(4deg)}
+.clovers canvas:nth-child(3n){transform:rotate(-5deg)}
+.contents{margin-top:clamp(36px,5vw,56px);border-top:1px solid rgba(61,66,34,.2);padding-top:18px}
+.contents ol{list-style:none;margin:10px 0 0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:4px 32px}
+.contents a{display:flex;align-items:center;gap:10px;padding:8px 0;text-decoration:none;font-family:var(--hand);font-size:26px;line-height:1}
+.contents a:hover{color:var(--berry)}
+.contents canvas{width:22px;height:auto;aspect-ratio:3/4;flex:none}
+.contents .n{font-family:var(--label);font-size:11px;letter-spacing:.14em;color:var(--muted);margin-left:auto}
+canvas.clover{display:block}
+.clover-row{display:flex;gap:14px;align-items:center}
+.clover-row canvas{width:28px;aspect-ratio:3/4;height:auto}
+
+/* ---------- logo + stitching ---------- */
+.logo{display:flex;align-items:center;gap:8px;text-decoration:none;color:var(--moss)}
+.logo-mark{width:46px;height:auto;transition:transform .4s ease}
+.logo:hover .logo-mark{transform:rotate(20deg)}
+.logo span{font-family:var(--hand);font-size:26px;line-height:1;white-space:nowrap}
+@media (max-width:520px){.logo span{display:none}}
+canvas.stitch{display:block;width:100%;height:66px}
+.peek .hand{color:var(--cobalt) !important}
+.step .n{color:var(--cobalt) !important}
+.blob{position:absolute;z-index:0;pointer-events:none}
+
+/* ---------- peeks ---------- */
+.intro{display:grid;grid-template-columns:1fr 1.2fr;gap:clamp(20px,5vw,64px);align-items:end;padding:clamp(56px,8vw,96px) 0 28px}
+.intro h2{margin:0;font-family:var(--sig);font-weight:400;font-size:clamp(64px,9vw,112px);line-height:.9;color:var(--berry)}
+.intro p{margin:0;max-width:46ch;position:relative;z-index:1}
+.peeks{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(18px,2.6vw,32px);padding:0 0 clamp(56px,8vw,96px);list-style:none;margin:0}
+.peek a{display:flex;flex-direction:column;gap:12px;text-decoration:none}
+.peek .frame{aspect-ratio:1/1;position:relative;overflow:hidden;background-color:var(--cream);background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M1.5 1.5L6.5 6.5M6.5 1.5L1.5 6.5' stroke='%239DB97A' stroke-width='1.1' opacity='.55'/%3E%3C/svg%3E");padding:12px;box-shadow:0 10px 24px -18px rgba(40,44,20,.6)}
+.peek .frame img{width:100%;height:100%;object-fit:cover;transition:transform .6s ease}
+.peek .frame .col{position:absolute;inset:12px;width:calc(100% - 24px);height:calc(100% - 24px);opacity:0;transition:opacity .5s ease,transform .6s ease}
+.peek a:hover .frame img,.peek a:focus-visible .frame img{transform:scale(1.04)}
+.peek a:hover .frame .col,.peek a:focus-visible .frame .col{opacity:1}
+.peek .meta{display:flex;justify-content:space-between;align-items:baseline;gap:8px}
+.peek .t{font-family:var(--label);font-weight:600;font-size:15px;letter-spacing:.12em;text-transform:uppercase;color:var(--berry)}
+.peek .hand{font-size:22px;color:var(--muted)}
+.peek .more{font-family:var(--hand);font-size:21px;color:var(--moss);margin-top:-6px}
+
+
+.deco{position:absolute;pointer-events:none;opacity:.9}
+
+/* ---------- project page ---------- */
+.proj-head{position:relative;padding:clamp(28px,5vw,56px) 0 20px}
+.proj-head .back{font-family:var(--hand);font-size:24px;text-decoration:none}
+.proj-head .back:hover{color:var(--berry)}
+.proj-head .row{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;color:var(--berry);margin-top:18px}
+.proj-head h1{margin:8px 0 0;font-family:var(--sig);font-weight:400;font-size:clamp(76px,12vw,160px);line-height:.95;color:var(--berry);text-wrap:balance}
+.proj-head .lede{display:grid;grid-template-columns:1.4fr 1fr;gap:clamp(20px,5vw,64px);margin-top:8px}
+.proj-head .lede p{margin:0;font-size:18px;max-width:58ch}
+.proj-head dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:6px 16px;align-content:start}
+.proj-head dt{font-family:var(--label);font-weight:600;font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);padding-top:3px}
+.proj-head dd{margin:0}
+.block-title{display:flex;align-items:baseline;gap:16px;margin:clamp(40px,6vw,72px) 0 18px}
+.block-title h2{margin:0;font-family:var(--hand);font-weight:400;font-size:clamp(36px,5vw,52px);line-height:1;color:var(--moss)}
+.block-title span{flex:1;border-bottom:1px solid rgba(61,66,34,.25)}
+.gallery{display:grid;gap:clamp(12px,2vw,20px)}
+.gallery.g1{grid-template-columns:1fr}
+.gallery.g3{grid-template-columns:repeat(3,1fr);align-items:end}
+.gallery.g2{grid-template-columns:1fr 1fr;align-items:start}
+.gallery.g4{grid-template-columns:repeat(4,1fr)}
+.gallery figure{margin:0;background:var(--cream);padding:10px}
+.gallery figure.tall img{max-height:1100px;width:100%;object-fit:contain}
+.gallery button{all:unset;cursor:zoom-in;display:block;width:100%}
+.gallery figcaption{font-family:var(--hand);font-size:21px;padding:6px 2px 0;color:var(--muted)}
+.steps{list-style:none;margin:0;padding:0;display:grid;gap:clamp(18px,3vw,28px)}
+.step{display:grid;grid-template-columns:72px 1fr 1fr;gap:clamp(14px,3vw,32px);align-items:start;padding-top:18px;border-top:1px solid rgba(61,66,34,.2)}
+.step .n{font-family:var(--hand);font-size:54px;line-height:.8;color:var(--berry)}
+.step h3{margin:0 0 6px;font-family:var(--label);font-weight:600;font-size:15px;letter-spacing:.14em;text-transform:uppercase}
+.step p{margin:0;max-width:50ch}
+.step .ph{aspect-ratio:16/7;border:1.5px dashed rgba(61,66,34,.4);display:flex;align-items:center;justify-content:center;text-align:center;padding:16px;font-family:var(--hand);font-size:22px;color:var(--muted);background:rgba(243,239,217,.35)}
+.step figure{margin:0;background:var(--cream);padding:8px}
+.step figure img{width:100%;max-height:340px;object-fit:cover}
+.view,.cover{overflow-x:clip}
+.pager{display:flex;justify-content:space-between;gap:16px;margin:clamp(56px,8vw,96px) 0 0;padding:24px 0;border-top:1px solid rgba(61,66,34,.25)}
+.pager a{text-decoration:none;display:flex;flex-direction:column;gap:2px}
+.pager a:last-child{text-align:right}
+.pager .t{font-family:var(--sig);font-size:44px;line-height:1;color:var(--berry)}
+
+/* ---------- about ---------- */
+.about{position:relative;padding:clamp(40px,6vw,72px) 0 clamp(56px,8vw,96px)}
+.about h1{margin:0;font-family:var(--sig);font-weight:400;font-size:clamp(80px,13vw,170px);line-height:.9;color:var(--berry)}
+.about .grid{display:grid;grid-template-columns:1.3fr 1fr;gap:clamp(24px,5vw,72px);margin-top:12px;position:relative;z-index:1}
+.about p{margin:0 0 1em;font-size:18px;max-width:58ch}
+.facts{display:grid;gap:16px;align-content:start;background:var(--cream);padding:24px;background-image:var(--grain)}
+.facts div{display:flex;flex-direction:column;gap:2px}
+.facts .label{color:var(--berry)}
+
+.enter{display:inline-block;margin-top:28px;font-family:var(--hand);font-size:28px;color:var(--cream);background:var(--moss);padding:8px 22px 10px;border-radius:999px;text-decoration:none;transition:background .2s}
+.enter:hover{background:var(--berry)}
+.hero{min-height:calc(100vh - 66px)}
+.view[data-view="work"] .intro{padding-top:clamp(24px,4vw,48px)}
+
+.about p.hi{font-family:var(--hand);font-size:clamp(34px,4vw,44px);line-height:1;color:var(--berry);margin:0 0 .5em}
+
+/* resume */
+.resume{padding:clamp(28px,5vw,56px) 0 clamp(56px,8vw,96px)}
+.res-head{display:flex;align-items:flex-end;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.res-head h1{margin:0;font-family:var(--sig);font-weight:400;font-size:clamp(80px,13vw,170px);line-height:.9;color:var(--berry)}
+.res-head .enter{margin:0 0 18px}
+.res-page{margin:24px auto 0;max-width:860px;background:#fff;padding:0;box-shadow:0 18px 40px -24px rgba(40,44,20,.6);border:12px solid var(--cream)}
+.res-page img{width:100%}
+
+/* merchandising lens */
+.lens{margin-top:28px;background-color:var(--cream);background-image:var(--grain);padding:clamp(18px,3vw,28px);border-left:4px solid var(--cobalt)}
+.lens .label{color:var(--cobalt)}
+.lens dl{margin:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px 28px}
+.lens dl div{display:flex;flex-direction:column;gap:4px}
+.lens dt{font-family:var(--label);font-weight:600;font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--berry)}
+.lens dd{margin:0;max-width:44ch}
+
+/* about layout + hobbies */
+.about-grid{display:grid;grid-template-columns:minmax(220px,.8fr) 1.4fr;gap:clamp(24px,5vw,64px);margin-top:16px;position:relative;z-index:1;align-items:start}
+.portrait{margin:0;background-color:var(--cream);background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M1.5 1.5L6.5 6.5M6.5 1.5L1.5 6.5' stroke='%239DB97A' stroke-width='1.1' opacity='.55'/%3E%3C/svg%3E");padding:12px;transform:rotate(-1.5deg);box-shadow:0 12px 26px -18px rgba(40,44,20,.6)}
+.portrait img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center}
+.about-grid .facts{margin-top:24px}
+.off-head{display:flex;align-items:baseline;gap:18px;flex-wrap:wrap}
+.off-head h2{margin:0;font-family:var(--sig);font-weight:400;font-size:clamp(56px,8vw,96px);line-height:1;color:var(--berry)}
+.off-head .hand{margin:0;color:var(--muted)}
+.hobbies{list-style:none;margin:20px 0 0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(18px,2.6vw,32px)}
+.hobbies li{display:flex;flex-direction:column;gap:10px}
+.hframe{position:relative;aspect-ratio:1/1;background-color:var(--cream);background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M1.5 1.5L6.5 6.5M6.5 1.5L1.5 6.5' stroke='%239DB97A' stroke-width='1.1' opacity='.55'/%3E%3C/svg%3E");padding:12px;box-shadow:0 10px 24px -18px rgba(40,44,20,.6)}
+.hframe img{width:100%;height:100%;object-fit:cover}
+.hframe .mini{position:absolute;right:-10px;bottom:-14px;width:38%;height:auto;aspect-ratio:1/1;border:6px solid var(--cream);transform:rotate(5deg);box-shadow:0 8px 18px -10px rgba(40,44,20,.6)}
+.hframe.golf svg{width:100%;height:100%;background:var(--cream);display:block}
+.hmeta{display:flex;justify-content:space-between;align-items:baseline;margin-top:6px}
+.hmeta .t{font-family:var(--label);font-weight:600;font-size:15px;letter-spacing:.12em;text-transform:uppercase;color:var(--berry)}
+.hmeta .hand{font-size:22px;color:var(--cobalt)}
+.hobbies p{margin:0;max-width:40ch}
+@media (max-width:860px){.about-grid{grid-template-columns:1fr}.portrait{max-width:340px}.hobbies{grid-template-columns:1fr 1fr}}
+@media (max-width:520px){.hobbies{grid-template-columns:1fr}}
+
+/* ---------- contact ---------- */
+.contact{background:var(--olive);background-image:var(--grain);padding:clamp(48px,7vw,80px) 0 28px;position:relative;overflow:hidden}
+.contact .big{margin:0;font-family:var(--sig);font-weight:400;font-size:clamp(70px,11vw,140px);line-height:.9;color:var(--cream)}
+.contact .links{display:flex;gap:clamp(20px,5vw,56px);flex-wrap:wrap;margin-top:24px}
+.contact .links div{display:flex;flex-direction:column;gap:2px}
+.contact .links a{text-decoration:underline;text-decoration-color:rgba(243,239,217,.5);text-underline-offset:4px}
+.contact .links a:hover{color:var(--cream)}
+.contact .links .label{color:var(--cream)}
+.contact .foot{margin-top:48px;font-family:var(--label);font-size:11px;letter-spacing:.14em;opacity:.75}
+
+/* lightbox */
+.lb{position:fixed;inset:0;background:rgba(40,43,22,.94);display:none;align-items:center;justify-content:center;padding:24px;z-index:50;cursor:zoom-out}
+.lb.open{display:flex}
+.lb img{max-height:92vh;max-width:92vw;object-fit:contain}
+.lb button{position:absolute;top:14px;right:20px;background:none;border:0;color:var(--cream);font-family:var(--hand);font-size:28px;cursor:pointer}
+
+@media (prefers-reduced-motion: reduce){.peek .frame img{transition:none}}
+@media (max-width:860px){
+  .peeks{grid-template-columns:1fr 1fr}
+  .intro,.proj-head .lede,.about .grid{grid-template-columns:1fr}
+  .step{grid-template-columns:52px 1fr}
+  .step .ph,.step figure{grid-column:2}
+  .deco{display:none}
+}
+@media (max-width:860px){
+  .hero-grid{grid-template-columns:1fr}
+  .clovers{justify-self:start;max-width:300px}
+  .contents ol{grid-template-columns:1fr 1fr}
+}
+@media (max-width:520px){
+  .gallery.g3,.gallery.g2{grid-template-columns:1fr}
+  .gallery.g4{grid-template-columns:1fr 1fr}
+  .contents ol{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<!-- ============ HOME / WORK ============ -->
+<div class="view" data-view="home">
+  <section class="hero" aria-label="Introduction">
+    <div class="wrap">
+      <div class="top">
+        <a class="logo" href="#home" aria-label="Chloe Nayeon Cho, home"><svg class="logo-mark" viewBox="-36 -36 72 84" aria-hidden="true"><g transform="rotate(-12)"><path d="M0 0C-1 9 4 22 13 34" fill="none" stroke="#7E9A55" stroke-width="2.6" stroke-linecap="round"/><g id="lf"><path d="M0-1C-5-6-14-11-14-19C-14-26-6-28 0-21C6-28 14-26 14-19C14-11 5-6 0-1Z" fill="#9DB97A"/><path d="M0-3V-17" stroke="#F3EFD9" stroke-width="1.1" stroke-linecap="round"/></g><use href="#lf" transform="rotate(90)" fill="#B3C98B"/><use href="#lf" transform="rotate(180)"/><use href="#lf" transform="rotate(270)"/><path d="M-2.6-2.6L2.6 2.6M2.6-2.6L-2.6 2.6" stroke="#B5697F" stroke-width="1.6" stroke-linecap="round"/></g></svg><span>chloe nayeon cho</span></a>
+        <nav aria-label="Main"><a class="label" href="#work" data-nav="work">Work</a><a class="label" href="#about" data-nav="about">About</a><a class="label" href="Chloe_Cho_Resume.pdf" target="_blank" rel="noopener">Résumé ↗</a><a class="label" href="#contact">Contact</a></nav>
+      </div>
+      <div class="hero-grid">
+        <div>
+          <h1>Chloe <span class="mid">Nayeon</span> <span>Cho</span></h1>
+          <p class="sub">fashion design &amp; management</p>
+          <p class="label" style="color:var(--berry);margin:10px 0 0">Merchandising · Buying · Planning</p>
+          <a class="enter" href="#work">see my work →</a>
+        </div>
+        <div style="position:relative;justify-self:end;width:100%;max-width:440px"><svg class="blob" viewBox="0 0 200 200" style="inset:-14% -10% -10% -12%;width:122%;height:124%" aria-hidden="true"><path d="M100 8c14 0 18 12 30 14s24-6 32 4 2 22 8 32 20 14 18 28-16 16-18 28 10 22 2 32-22 4-32 10-12 22-26 24-22-12-34-14-24 8-32-2-2-22-10-32-22-12-22-26 14-18 16-30-8-24 2-32 22 0 32-8 18-20 34-20z" fill="#C9D88F" opacity=".45"/><ellipse cx="100" cy="104" rx="70" ry="66" fill="none" stroke="#3E5DA6" stroke-width="1.4" stroke-dasharray="2 5" opacity=".55"/></svg>
+        <div class="clovers" aria-hidden="true" style="position:relative;z-index:1">
+          <canvas class="clover" data-c="#B9CC8E,#E2E8B8" data-k="4"></canvas>
+          <canvas class="clover" data-c="#9DB2CF,#D8E0D0" data-k="4"></canvas>
+          <canvas class="clover" data-c="#A6BCA6,#DCE4C4" data-k="3"></canvas>
+          <canvas class="clover" data-c="#A9BFA0,#E6EAC6" data-k="3"></canvas>
+          <canvas class="clover" data-c="#AFC47E,#E6EBC2" data-k="4"></canvas>
+          <canvas class="clover" data-c="#A3B6CC,#E0E6D6" data-k="4"></canvas>
+        </div></div>
+      </div>
+      <nav class="contents" aria-label="Projects">
+        <span class="label" style="color:var(--berry)">Contents</span>
+        <ol id="contents"></ol>
+      </nav>
+    </div>
+  </section>
+</div>
+
+<div class="view" data-view="work" hidden>
+  <div class="wrap">
+    <div class="top">
+      <a class="logo" href="#home" aria-label="Chloe Nayeon Cho, home"><svg class="logo-mark" viewBox="-36 -36 72 84" aria-hidden="true"><g transform="rotate(-12)"><path d="M0 0C-1 9 4 22 13 34" fill="none" stroke="#7E9A55" stroke-width="2.6" stroke-linecap="round"/><g id="lf"><path d="M0-1C-5-6-14-11-14-19C-14-26-6-28 0-21C6-28 14-26 14-19C14-11 5-6 0-1Z" fill="#9DB97A"/><path d="M0-3V-17" stroke="#F3EFD9" stroke-width="1.1" stroke-linecap="round"/></g><use href="#lf" transform="rotate(90)" fill="#B3C98B"/><use href="#lf" transform="rotate(180)"/><use href="#lf" transform="rotate(270)"/><path d="M-2.6-2.6L2.6 2.6M2.6-2.6L-2.6 2.6" stroke="#B5697F" stroke-width="1.6" stroke-linecap="round"/></g></svg><span>chloe nayeon cho</span></a>
+      <nav aria-label="Main"><a class="label" href="#work" data-nav="work">Work</a><a class="label" href="#about" data-nav="about">About</a><a class="label" href="Chloe_Cho_Resume.pdf" target="_blank" rel="noopener">Résumé ↗</a><a class="label" href="#contact">Contact</a></nav>
+    </div>
+  </div>
+  <div class="wrap" style="position:relative">
+    <img class="deco" src="img/botanical-2.png" alt="" style="right:-70px;top:-30px;width:170px;transform:rotate(12deg);z-index:0">
+    <div class="intro">
+      <h2>selected work</h2>
+      
+      <p>Five projects, from brand building and trend research to product I made by hand. Click any piece to see the full work and the merchandising thinking behind it.</p>
+    </div>
+    <ol class="peeks" id="peeks"></ol>
+  </div>
+</div>
+
+<!-- ============ PROJECT ============ -->
+<div class="view" data-view="project" hidden>
+  <div class="wrap">
+    <div class="top">
+      <a class="logo" href="#home" aria-label="Chloe Nayeon Cho, home"><svg class="logo-mark" viewBox="-36 -36 72 84" aria-hidden="true"><g transform="rotate(-12)"><path d="M0 0C-1 9 4 22 13 34" fill="none" stroke="#7E9A55" stroke-width="2.6" stroke-linecap="round"/><g id="lf"><path d="M0-1C-5-6-14-11-14-19C-14-26-6-28 0-21C6-28 14-26 14-19C14-11 5-6 0-1Z" fill="#9DB97A"/><path d="M0-3V-17" stroke="#F3EFD9" stroke-width="1.1" stroke-linecap="round"/></g><use href="#lf" transform="rotate(90)" fill="#B3C98B"/><use href="#lf" transform="rotate(180)"/><use href="#lf" transform="rotate(270)"/><path d="M-2.6-2.6L2.6 2.6M2.6-2.6L-2.6 2.6" stroke="#B5697F" stroke-width="1.6" stroke-linecap="round"/></g></svg><span>chloe nayeon cho</span></a>
+      <nav aria-label="Main"><a class="label" href="#work" data-nav="work">Work</a><a class="label" href="#about" data-nav="about">About</a><a class="label" href="Chloe_Cho_Resume.pdf" target="_blank" rel="noopener">Résumé ↗</a><a class="label" href="#contact">Contact</a></nav>
+    </div>
+    <article id="proj"></article>
+  </div>
+</div>
+
+<!-- ============ ABOUT ============ -->
+<div class="view" data-view="about" hidden>
+  <div class="wrap" style="position:relative">
+    <div class="top">
+      <a class="logo" href="#home" aria-label="Chloe Nayeon Cho, home"><svg class="logo-mark" viewBox="-36 -36 72 84" aria-hidden="true"><g transform="rotate(-12)"><path d="M0 0C-1 9 4 22 13 34" fill="none" stroke="#7E9A55" stroke-width="2.6" stroke-linecap="round"/><g id="lf"><path d="M0-1C-5-6-14-11-14-19C-14-26-6-28 0-21C6-28 14-26 14-19C14-11 5-6 0-1Z" fill="#9DB97A"/><path d="M0-3V-17" stroke="#F3EFD9" stroke-width="1.1" stroke-linecap="round"/></g><use href="#lf" transform="rotate(90)" fill="#B3C98B"/><use href="#lf" transform="rotate(180)"/><use href="#lf" transform="rotate(270)"/><path d="M-2.6-2.6L2.6 2.6M2.6-2.6L-2.6 2.6" stroke="#B5697F" stroke-width="1.6" stroke-linecap="round"/></g></svg><span>chloe nayeon cho</span></a>
+      <nav aria-label="Main"><a class="label" href="#work" data-nav="work">Work</a><a class="label" href="#about" data-nav="about">About</a><a class="label" href="Chloe_Cho_Resume.pdf" target="_blank" rel="noopener">Résumé ↗</a><a class="label" href="#contact">Contact</a></nav>
+    </div>
+    <img class="deco" src="img/botanical-1.png" alt="" style="right:-20px;top:30px;width:170px;z-index:0">
+    <section class="about">
+      <div class="clover-row"><canvas class="clover" data-c="#B9CC8E,#E2E8B8" data-k="4" aria-hidden="true"></canvas><canvas class="clover" data-c="#9DB2CF,#D8E0D0" data-k="3" aria-hidden="true"></canvas></div>
+      <h1>about me</h1>
+      <div class="about-grid">
+        <figure class="portrait"><img src="img/about-portrait.jpg" alt="Chloe standing on a brownstone street in a camel sweater and jeans"></figure>
+        <div>
+          <p class="hi">Hi, I'm Chloe!</p>
+          <p>I'm a Fashion Design and Management student at Cornell University, with a minor in Data Science and Real Estate. I'm passionate about the intersection of fashion, business, and creativity, particularly how thoughtful design and strategic decision-making come together to shape the fashion industry.</p>
+          <p>Through my experiences in merchandising, creative direction, marketing, and fashion show operations, I've developed an interest in the business side of fashion, especially buying, merchandising, and retail strategy.</p>
+          <p>I love exploring new ideas, collaborating with others, and finding ways to bring both creativity and analytical thinking into my work. Outside of fashion, you'll probably find me café hopping, crocheting, golfing, or keeping up with Formula 1!</p>
+          <div class="facts">
+            <div><span class="label">Software</span><span>CLO 3D, Adobe Photoshop, InDesign, Illustrator</span></div>
+            <div><span class="label">Merchandising</span><span>Target customer and brand positioning, trend research, color stories, capsule assortments</span></div>
+            <div><span class="label">Product</span><span>Technical flats, patternmaking, garment construction, fabric knowledge</span></div>
+          </div>
+        </div>
+      </div>
+
+      <canvas class="stitch" aria-hidden="true" style="margin:clamp(40px,6vw,64px) 0 8px"></canvas>
+      <div class="off-head"><h2>off the clock</h2><p class="hand">what I'm doing when I'm not in the studio</p></div>
+      <ul class="hobbies">
+        <li>
+          <div class="hframe duo"><img src="img/hobby-crochet.jpg" alt="Crocheted flowers in a glass vase: a pink rose, a white peony, lavender and a yellow bloom"><img class="mini" src="img/hobby-yarn.jpg" alt="Wall of yarn in every color at a yarn shop"></div>
+          <div class="hmeta"><span class="t">Crochet</span><span class="hand">no. 01</span></div>
+          <p>I crochet flowers and small pieces, and I can lose an hour in a yarn shop just looking at color.</p>
+        </li>
+        <li>
+          <div class="hframe"><img src="img/hobby-cafe.jpg" alt="Blueberry layer cake with a strawberry milk and a lemon soda at a café"></div>
+          <div class="hmeta"><span class="t">Café hopping</span><span class="hand">no. 02</span></div>
+          <p>Always finding a new café, usually picked for the cake.</p>
+        </li>
+        <li>
+          <div class="hframe"><img src="img/hobby-golf.jpg" alt="Chloe mid-swing on a golf fairway under a blue sky"></div>
+          <div class="hmeta"><span class="t">Golf</span><span class="hand">no. 03</span></div>
+          <p>Out on the course whenever the weather's good.</p>
+        </li>
+      </ul>
+    </section>
+  </div>
+</div>
+
+<!-- ============ CONTACT (every page) ============ -->
+<canvas class="stitch" aria-hidden="true" style="background:transparent"></canvas>
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="clover-row" style="margin-bottom:14px"><canvas class="clover" data-c="#DCE6B4,#F3EFD9" data-k="4" aria-hidden="true"></canvas><canvas class="clover" data-c="#C9D6E2,#F3EFD9" data-k="4" aria-hidden="true"></canvas></div>
+    <p class="big">get in touch</p>
+    <div class="links">
+      <div><span class="label">Email</span><a href="mailto:cnc52@cornell.edu">cnc52@cornell.edu</a></div>
+      <div><span class="label">LinkedIn</span><a href="https://www.linkedin.com/in/chloenayeoncho224" target="_blank" rel="noopener">linkedin.com/in/chloenayeoncho224</a></div>
+      <div><span class="label">Résumé</span><a href="Chloe_Cho_Resume.pdf" target="_blank" rel="noopener">view my résumé (PDF) ↗</a></div>
+    </div>
+    <div class="foot">© 2026 CHLOE NAYEON CHO</div>
+  </div>
+</section>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Enlarged image">
+  <button type="button" id="lbClose">close ✕</button>
+  <img id="lbImg" alt="">
+</div>
+
+<script>
+const P=[
+{id:"solene",title:"Solène",short:"Solène",cat:"Brand concept · S/S26",year:"2025",peek:"img/peek-solene.jpg",
+ meta:[["Type","Resortwear brand + capsule, S/S26"],["Team","Chloe Cho & Doga Ozalp"],["Tools","CLO 3D, Adobe Illustrator, Photoshop"]],
+ lede:"A modern resortwear brand for women 22–35 who want effortless elegance while traveling. Inspired by Mediterranean summers, the capsule pairs clean lines and soft draping with a muted palette of ivory, dusty blue, blush and warm taupe.",
+ lens:[["Customer","Style-conscious women 22–35 who travel and value quality, versatility and understated sophistication."],["Positioning","Refined, feminine resortwear. Brand keywords: effortless, feminine, refined."],["Assortment","A ruffle cami, wide-leg trouser and polka-dot halter dress that work together as one capsule."]],
+ gallery:{cls:"g2",items:[{src:"img/solene-board.jpg",alt:"Solène S/S26 presentation board with brand statement, flats, illustrations, mood board and CLO 3D render",tall:true,cap:"final presentation board"},{src:"img/solene-mood.png",alt:"Solène mood board",tall:true,cap:"mood board"}]},
+ steps:[["Brand & customer","Named the brand, defined the customer and wrote the brand statement and keywords before designing anything.","img/solene-brand.jpg",""],
+        ["Mood & palette","Built the mood board around Mediterranean travel and pulled fabrics (silk satin, linen, twill) and a postcard palette from it.","img/peek-solene-color.jpg",""],
+        ["Flats","Drew front and back technical flats for each piece in the capsule.","img/solene-flats.jpg",""],
+        ["Illustration","Rendered the looks as fashion illustrations to show color, fabric and styling.","img/solene-illus.jpg",""],
+        ["3D sample","Patterned and simulated the halter dress in CLO 3D to check fit and drape before cutting fabric.","img/peek-clo-color.jpg",""]]},
+{id:"second-skin",title:"Second Skin",short:"Second Skin",cat:"Trend concept",year:"2025",peek:"img/peek-second-skin.jpg",
+ meta:[["Type","Trend concept board"],["Year","2025"],["Tools","Adobe Photoshop"]],
+ lede:"A study of transparency and structure. Lace, shadow and sculptural metal contour the body, turning garments into intimate armor that both reveals and protects.",
+ lens:[["Trend","Sheer layering, lace and sculptural metal jewelry."],["Categories","Sheer dresses, lace hosiery and statement jewelry that could be pulled into one floor story."],["Color","Four-tone palette: espresso, skin, bone, black."]],
+ gallery:{cls:"g1",items:[{src:"img/second-skin.jpg",alt:"Second Skin mood board",tall:true}]},
+ steps:[["Research","Collected references on lace, sheer knits, corsetry and sculptural body jewelry, looking for pieces that cover and expose at the same time.",null,"research images or Pinterest board"],
+        ["Palette","Pulled four tones straight from the imagery: espresso, skin, bone and black.",null,"palette pulls"],
+        ["Composition","Layered and masked everything in Photoshop over a gauze texture, then wrote the concept statement to anchor the board.","img/peek-second-skin-color.jpg",""]]},
+{id:"childrenswear",title:"Childrenswear",short:"Childrenswear",cat:"Product development",year:"2025",peek:"img/peek-gingham.jpg",
+ meta:[["Type","Garment construction"],["Year","2025"],["Materials","Lightweight cotton, cotton gingham, lace, ribbon"]],
+ lede:"A two-piece set inspired by the color palette and themes of The Adventures of Strawberry Shortcake. A white cotton short-sleeve shirt with a squared, lace-trimmed neckline and a green ribbon at the front, paired with a red-and-white gingham skirt. The blouse has a fitted bodice and the A-line skirt allows ease of movement, balancing playful charm with classic childrenswear elements.",
+ lens:[["Customer","A young client: lightweight cotton chosen for breathability and comfort."],["Design balance","Playful, character-inspired color with classic childrenswear details like lace trim and a ribbon bow."],["Product knowledge","Patterned, cut and sewn by hand, with an understanding of fit, fabric and what drives cost and quality."]],
+ gallery:{cls:"g4",items:[{src:"img/kids-1.jpg",alt:"Childrenswear set, front view",cap:"front"},{src:"img/kids-2.jpg",alt:"Childrenswear set, back view",cap:"back"},{src:"img/kids-3.jpg",alt:"Childrenswear set, left side",cap:"left"},{src:"img/kids-4.jpg",alt:"Childrenswear set, right side",cap:"right"}]},
+ steps:[["Pattern","Drafted the bodice, puff sleeve and skirt from blocks and trued the seams.",null,"pattern pieces"],
+        ["Cut","Laid out the gingham so the checks line up across the seams.",null,"layout on fabric"],
+        ["Sew","Assembled the blouse, attached the lace collar and threaded the ribbon by hand.","img/peek-gingham-color.jpg",""],
+        ["Fit","Checked fit and balance on the size 6 form from all four sides.",null,"fitting notes"]]},
+{id:"endan-ji",title:"Endan-ji",short:"Endan-ji",cat:"Color story",year:"2024",peek:"img/peek-paper.jpg",
+ meta:[["Type","Product line, 3 looks"],["Year","2024"],["Materials","Pollen paper, eco-friendly materials, Jumchi technique"]],
+ lede:"A product line of three looks, each inspired by an endangered flower and made from eco-friendly materials like pollen paper. Each look takes its color and silhouette from its flower: Euryale ferox, yellow hibiscus (황근꽃) and Iris ruthenica.",
+ lens:[["Categories","A dress, a three-piece jacket, top and skirt set, and a party dress."],["Color story","Each look is built from one flower's palette, the same way a seasonal color story is developed."],["Sustainability","Eco-friendly materials throughout, with the traditional Jumchi paper technique on Look 2."]],
+ gallery:{cls:"g3",items:[{src:"img/endanji-1.jpg",alt:"Goddess of Lotus: flowing paper dress in pink, yellow and green with floral headpiece",cap:"look 1 · goddess of lotus"},{src:"img/endanji-2.jpg",alt:"Wild Flowers: paper jacket, top and rose-wrapped skirt with floral headpiece",cap:"look 2 · wild flowers"},{src:"img/endanji-3.jpg",alt:"Forest Nymph: purple and pink paper party dress with leaf trim and floral mask",cap:"look 3 · forest nymph"}]},
+ steps:[["Sketch","Drew each look from a flower, translating petal shapes and color gradients into silhouettes.",null,"flower sketches"],
+        ["Dye the paper","Dyed sheets in soft gradients, then crumpled and smoothed them so they behave more like fabric.",null,"dyed paper sheets"],
+        ["Build","Shaped and joined panels over the form, adding paper petals and leaves as trims and headpieces.","img/peek-paper-color.jpg",""],
+        ["Photograph","Hung each finished look against a wall with directional light to throw a shadow figure.",null,"setup shot"]]},
+{id:"thread",title:"Thread Magazine",short:"Thread",cat:"Creative direction",year:"2026",peek:"img/peek-editorial.jpg",
+ meta:[["Club","Thread"],["Issue","SS26 · Issue 27, The Sports Magazine"],["Role","Creative direction support"]],
+ lede:"Editorial work for Thread, my fashion club, where I helped with creative direction. The issue reimagines sport through fashion, from an evening-wear story staged in a wood-paneled library and stairwell to portraits in an athletes' locker room.",
+ lens:[["Creative direction","Helped shape the concept, styling and mood so each story reads as one clear idea."],["Presentation","Turning garments into a story, the same thinking behind a campaign or a floor set."]],
+ gallery:{cls:"g1",items:[{src:"img/editorial.jpg",alt:"Six models in evening wear around a piano in a wood-paneled library",cap:"royal sports · library shoot"},{src:"img/thread-1.jpg",alt:"Thread magazine spread: Royal Sports, a model in a white gown on a spiral staircase",cap:"royal sports · pages 36–37"},{src:"img/thread-2.jpg",alt:"Thread magazine spread: The Locker Room, athletes sitting in wooden lockers",cap:"the locker room · pages 42–43"},{src:"img/thread-3.jpg",alt:"Thread magazine spread: Threshold, locker room portraits on a deep red layout",cap:"threshold · pages 44–45"}]},
+ steps:[["Design","Sketched and developed my look for the collection.",null,"sketches"],
+        ["Make","Built the garment through fittings.","img/peek-editorial-color.jpg",""],
+        ["Shoot","Styled and shot with the full group on location.",null,"behind the scenes"]]}
+];
+
+// clover motif: soft airbrushed oval with a clover left in negative space
+function drawClover(cv){
+  const [c1,c2]=(cv.dataset.c||'#B9CC8E,#E2E8B8').split(','),k=+(cv.dataset.k||4);
+  const W=300,H=400;cv.width=W;cv.height=H;const x=cv.getContext('2d');
+  let seed=[...cv.dataset.c].reduce((a,ch)=>a*31+ch.charCodeAt(0),k)>>>0;
+  const rnd=()=>((seed=(seed*1664525+1013904223)>>>0)/4294967296);
+  x.save();x.filter='blur(3px)';
+  const g=x.createRadialGradient(W*.42,H*.35,10,W/2,H/2,H*.55);g.addColorStop(0,c2);g.addColorStop(1,c1);
+  x.fillStyle=g;x.beginPath();x.ellipse(W/2,H/2,W*.42,H*.44,0,0,Math.PI*2);x.fill();x.restore();
+  // airbrush speckle
+  for(let i=0;i<2600;i++){const a=rnd()*Math.PI*2,r=Math.sqrt(rnd());const px=W/2+Math.cos(a)*r*W*.42,py=H/2+Math.sin(a)*r*H*.44;
+    x.fillStyle=rnd()<.5?'rgba(255,255,255,.18)':'rgba(70,90,70,.10)';x.fillRect(px,py,1.6,1.6);}
+  // cut out the clover
+  x.save();x.globalCompositeOperation='destination-out';x.filter='blur(1.6px)';x.fillStyle='#000';
+  const cx=W/2,cy=H*.42,L=W*.16,rot=(rnd()-.5)*.5;
+  for(let i=0;i<k;i++){
+    x.save();x.translate(cx,cy);x.rotate(rot+i*(Math.PI*2/k)+(k===3?-Math.PI/2:Math.PI/4));
+    // heart leaf pointing in toward center
+    x.beginPath();x.arc(L*1.18,-L*.36,L*.43,0,Math.PI*2);x.fill();x.beginPath();x.arc(L*1.18,L*.36,L*.43,0,Math.PI*2);x.fill();
+    x.beginPath();x.moveTo(L*.14,0);x.lineTo(L*.9,-L*.7);x.lineTo(L*1.3,0);x.lineTo(L*.9,L*.7);x.closePath();x.fill();
+    x.restore();}
+  x.lineWidth=W*.022;x.lineCap='round';x.strokeStyle='#000';x.beginPath();x.moveTo(cx,cy);
+  x.quadraticCurveTo(cx+W*.05,cy+H*.2,cx-W*.01,cy+H*.36);x.stroke();x.restore();
+}
+
+// cross-stitch ribbon divider: X stitches on a 6px grid, two strands twisting
+function drawStitch(cv){
+  const r=cv.getBoundingClientRect(),dpr=Math.min(2,window.devicePixelRatio||1);
+  const W=Math.max(320,Math.round(r.width)),H=66;cv.width=W*dpr;cv.height=H*dpr;
+  const x=cv.getContext('2d');x.scale(dpr,dpr);x.lineWidth=1.1;x.lineCap='round';
+  const g=6,seen=new Set();
+  const X=(px,py,col)=>{const gx=Math.round(px/g)*g,gy=Math.round(py/g)*g,k=gx+','+gy;if(seen.has(k))return;seen.add(k);
+    x.strokeStyle=col;x.beginPath();x.moveTo(gx-2.3,gy-2.3);x.lineTo(gx+2.3,gy+2.3);x.moveTo(gx+2.3,gy-2.3);x.lineTo(gx-2.3,gy+2.3);x.stroke();};
+  for(let px=0;px<W;px+=3){
+    const a=px/95, y=H/2+16*Math.sin(a), tw=Math.cos(a*1.6), w=1+6*Math.abs(tw);
+    const col=tw>0?'#B5697F':'#9C97B8';
+    for(let d=-w;d<=w;d+=g) X(px,y+d,col);
+  }
+}
+function drawStitches(){document.querySelectorAll('canvas.stitch').forEach(c=>{if(c.offsetParent)drawStitch(c)});}
+addEventListener('resize',()=>{clearTimeout(window._st);window._st=setTimeout(drawStitches,150)});
+
+// contents list on the home page
+document.getElementById('contents').innerHTML=P.map((p,i)=>{const cols=['#B9CC8E,#E2E8B8','#9DB2CF,#D8E0D0','#A6BCA6,#DCE4C4'];
+  return `<li><a href="#${p.id}"><canvas class="clover" data-c="${cols[i%3]}" data-k="${i%2?3:4}" aria-hidden="true"></canvas>${p.title.toLowerCase()}<span class="n">${String(i+1).padStart(2,'0')}</span></a></li>`}).join('');
+
+// peeks
+document.getElementById('peeks').innerHTML=P.map((p,i)=>`
+<li class="peek"><a href="#${p.id}">
+  <div class="frame"><img src="${p.peek}" alt="Close-up of ${p.title}" loading="lazy"><img class="col" src="${p.peek.replace('.jpg','-color.jpg')}" alt="" loading="lazy"></div>
+  <div class="meta"><span class="t">${p.title}</span><span class="hand">no. ${String(i+1).padStart(2,'0')}</span></div>
+  <span class="more">${p.cat.toLowerCase()} · see the work →</span>
+</a></li>`).join('');
+
+function renderProject(i){
+  const p=P[i],prev=P[(i+P.length-1)%P.length],next=P[(i+1)%P.length];
+  const g=p.gallery.items.map(it=>`<figure class="${it.tall?'tall':''}"><button type="button" data-full="${it.src}" aria-label="Enlarge"><img src="${it.src}" alt="${it.alt}"></button>${it.cap?`<figcaption>${it.cap}</figcaption>`:''}</figure>`).join('');
+  const s=p.steps.map((st,k)=>`<li class="step"><span class="n">${k+1}</span><div><h3>${st[0]}</h3><p>${st[1]}</p></div>${st[2]?`<figure><button type="button" data-full="${st[2]}" aria-label="Enlarge"><img src="${st[2]}" alt="${st[0]} detail"></button></figure>`:`<div class="ph">add photo:<br>${st[3]}</div>`}</li>`).join('');
+  document.getElementById('proj').innerHTML=`
+  <header class="proj-head">
+    <a class="back" href="#work">← all work</a>
+    <div class="row"><span class="label">no. ${String(i+1).padStart(2,'0')}</span><span class="label">${p.cat}</span><span class="label">${p.year}</span></div>
+    <h1>${p.title}</h1>
+    <div class="lede"><p>${p.lede}</p><dl>${p.meta.map(m=>`<dt>${m[0]}</dt><dd>${m[1]}</dd>`).join('')}</dl></div>
+  </header>
+  ${p.lens?`<aside class="lens" aria-label="Merchandising lens"><dl>${p.lens.map(l=>`<div><dt>${l[0]}</dt><dd>${l[1]}</dd></div>`).join('')}</dl></aside>`:''}
+  <canvas class="stitch" aria-hidden="true" style="margin-top:28px"></canvas>
+  <div class="block-title"><canvas class="clover" data-c="#B9CC8E,#E2E8B8" data-k="4" style="width:30px" aria-hidden="true"></canvas><h2>the work</h2><span></span></div>
+  <div class="gallery ${p.gallery.cls}">${g}</div>
+
+  <nav class="pager" aria-label="More projects">
+    <a href="#${prev.id}"><span class="label">← previous</span><span class="t">${prev.title}</span></a>
+    <a href="#${next.id}"><span class="label">next →</span><span class="t">${next.title}</span></a>
+  </nav>`;
+  document.title=p.title+' · Chloe Nayeon Cho';
+  document.querySelectorAll('#proj canvas.clover').forEach(drawClover);
+}
+
+function route(){
+  const h=location.hash.slice(1);
+  const pi=P.findIndex(p=>p.id===h);
+  const v=pi>=0?'project':h==='about'?'about':h==='work'?'work':'home';
+  if(pi>=0) renderProject(pi); else document.title='Chloe Nayeon Cho Portfolio';
+  document.querySelectorAll('.view').forEach(el=>el.hidden=el.dataset.view!==v);
+  document.querySelectorAll('[data-nav]').forEach(a=>a.dataset.nav===v?a.setAttribute('aria-current','page'):a.removeAttribute('aria-current'));
+  drawStitches();
+  if(h==='contact') document.getElementById('contact').scrollIntoView(); else window.scrollTo(0,0);
+}
+addEventListener('hashchange',route);route();
+document.querySelectorAll('canvas.clover').forEach(drawClover);
+drawStitches();
+
+// lightbox
+const lb=document.getElementById('lb'),li=document.getElementById('lbImg');
+document.addEventListener('click',e=>{const b=e.target.closest('[data-full]');if(!b)return;
+  li.src=b.dataset.full;li.alt=b.querySelector('img').alt;lb.classList.add('open');document.getElementById('lbClose').focus();});
+function closeLb(){lb.classList.remove('open');li.src='';}
+lb.addEventListener('click',closeLb);
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeLb();});
+</script>
+</body>
+</html>
