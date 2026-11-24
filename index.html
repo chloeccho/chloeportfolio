@@ -159,6 +159,32 @@ canvas.stitch{display:block;width:100%;height:66px}
 .res-page{margin:24px auto 0;max-width:860px;background:#fff;padding:0;box-shadow:0 18px 40px -24px rgba(40,44,20,.6);border:12px solid var(--cream)}
 .res-page img{width:100%}
 
+/* experience */
+.xps{list-style:none;margin:0;padding:0 0 8px;display:grid;grid-template-columns:repeat(2,1fr);gap:clamp(16px,2.4vw,26px)}
+.xp{background-color:var(--cream);background-image:var(--grain);padding:clamp(18px,2.6vw,28px);border-top:4px solid var(--berry);display:flex;flex-direction:column;gap:6px}
+.xp:nth-child(2){border-top-color:var(--cobalt)}.xp:nth-child(3){border-top-color:#7E9A55}.xp:nth-child(4){border-top-color:var(--rose)}.xp:nth-child(5),.xp:nth-child(6){border-top-color:var(--lav)}
+.xp-top{display:flex;justify-content:space-between;align-items:baseline;gap:10px;flex-wrap:wrap}
+.xp .tag{font-family:var(--label);font-weight:600;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--cobalt)}
+.xp .when{font-family:var(--hand);font-size:21px;color:var(--muted)}
+.xp h3{margin:4px 0 0;font-family:var(--label);font-weight:600;font-size:19px;letter-spacing:.06em;text-transform:uppercase;color:var(--berry);text-wrap:balance}
+.xp .role{margin:0;font-weight:400}
+.xp ul{margin:6px 0 0;padding-left:18px;display:grid;gap:4px}
+.xp li{max-width:56ch}
+.xp-link{margin-top:8px;font-family:var(--hand);font-size:23px;color:var(--cobalt);text-decoration:none}
+.xp-link:hover{color:var(--berry)}
+@media (max-width:760px){.xps{grid-template-columns:1fr}}
+
+/* business case */
+.case{margin-top:24px;background-color:var(--cream);background-image:var(--grain);padding:clamp(20px,3vw,32px);border-left:5px solid var(--cobalt)}
+.case h2{margin:0 0 10px;font-family:var(--hand);font-weight:400;font-size:clamp(34px,4vw,46px);line-height:1;color:var(--cobalt)}
+.case dl{margin:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px 30px}
+.case dl div{display:flex;flex-direction:column;gap:4px}
+.case dt{font-family:var(--label);font-weight:600;font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--berry)}
+.case dd{margin:0;max-width:46ch}
+.proj-head .lede{margin-top:22px}
+.gallery{max-width:980px}
+.gallery.g1 figure.tall img{max-height:820px}
+
 /* merchandising lens */
 .lens{margin-top:28px;background-color:var(--cream);background-image:var(--grain);padding:clamp(18px,3vw,28px);border-left:4px solid var(--cobalt)}
 .lens .label{color:var(--cobalt)}
@@ -238,8 +264,9 @@ canvas.stitch{display:block;width:100%;height:66px}
         <div>
           <h1>Chloe <span class="mid">Nayeon</span> <span>Cho</span></h1>
           <p class="sub">fashion design &amp; management</p>
-          <p class="label" style="color:var(--berry);margin:10px 0 0">Merchandising · Buying · Planning</p>
-          <a class="enter" href="#work">see my work →</a>
+          <p class="label" style="color:var(--berry);margin:10px 0 0;font-size:14px">Merchandising · Buying · Retail strategy</p>
+          <p style="margin:10px 0 0;max-width:44ch">Cornell Fashion Design &amp; Management student with a minor in Data Science and Real Estate, focused on the business side of fashion.</p>
+          <a class="enter" href="#work">see my experience →</a>
         </div>
         <div style="position:relative;justify-self:end;width:100%;max-width:440px"><svg class="blob" viewBox="0 0 200 200" style="inset:-14% -10% -10% -12%;width:122%;height:124%" aria-hidden="true"><path d="M100 8c14 0 18 12 30 14s24-6 32 4 2 22 8 32 20 14 18 28-16 16-18 28 10 22 2 32-22 4-32 10-12 22-26 24-22-12-34-14-24 8-32-2-2-22-10-32-22-12-22-26 14-18 16-30-8-24 2-32 22 0 32-8 18-20 34-20z" fill="#C9D88F" opacity=".45"/><ellipse cx="100" cy="104" rx="70" ry="66" fill="none" stroke="#3E5DA6" stroke-width="1.4" stroke-dasharray="2 5" opacity=".55"/></svg>
         <div class="clovers" aria-hidden="true" style="position:relative;z-index:1">
@@ -269,9 +296,33 @@ canvas.stitch{display:block;width:100%;height:66px}
   <div class="wrap" style="position:relative">
     <img class="deco" src="img/botanical-2.png" alt="" style="right:-70px;top:-30px;width:170px;transform:rotate(12deg);z-index:0">
     <div class="intro">
-      <h2>selected work</h2>
-      
-      <p>Five projects, from brand building and trend research to product I made by hand. Click any piece to see the full work and the merchandising thinking behind it.</p>
+      <h2>experience</h2>
+      <p>Merchandising, operations, marketing and creative direction: the business side of fashion, from the showroom floor to the runway.</p>
+    </div>
+    <ol class="xps">
+      <li class="xp"><div class="xp-top"><span class="tag">Merchandising</span><span class="when">Paris · May – June 2026</span></div>
+        <h3>Damonte & Lacarrieu</h3><p class="role">Merchandising Intern</p>
+        <ul><li>Researched and selected merchandise to build client proposals aligned with brand positioning</li><li>Supported showroom merchandising, displays and daily store operations</li><li>Created promotional graphics and Instagram videos to showcase product</li></ul><a class="xp-link" href="#saint-tropez">see a client proposal I built →</a></li>
+      <li class="xp"><div class="xp-top"><span class="tag">Operations</span><span class="when">Ithaca · Sep 2025 – Present</span></div>
+        <h3>Cornell Fashion Collective</h3><p class="role">Show Operations Chair</p>
+        <ul><li>Lead show operations for a 100+ member organization, managing a 20+ person committee</li><li>Run seating, VIP, usher and front-of-house logistics for large runway shows</li><li>Build operational timelines and delegate to keep setup and shows on schedule</li></ul></li>
+      <li class="xp"><div class="xp-top"><span class="tag">Marketing</span><span class="when">Ithaca · Sep 2026 – Present</span></div>
+        <h3>The Wardrobe</h3><p class="role">Marketing Graphic Designer</p>
+        <ul><li>Design Instagram and promotional content for campus pop-ups and events</li><li>Grew Instagram by 100+ followers through targeted promotional content</li><li>Support marketing campaigns and fundraising events</li></ul></li>
+      <li class="xp"><div class="xp-top"><span class="tag">Creative direction</span><span class="when">Ithaca · Sep 2025 – Present</span></div>
+        <h3>Thread Magazine</h3><p class="role">Creative & Fashion Direction</p>
+        <ul><li>Develop editorial concepts from seasonal themes and emerging cultural trends</li><li>Coordinate locations, styling and posing for cohesive visual stories</li><li>Work with photographers and models on Cornell's largest fashion publication</li></ul></li>
+      <li class="xp"><div class="xp-top"><span class="tag">Leadership</span><span class="when">Ithaca · Aug 2026 – Present</span></div>
+        <h3>FSAD 1250: Fashion, Art & Design Thinking</h3><p class="role">Teaching Assistant</p>
+        <ul><li>Support 100+ students in weekly lectures and hands-on activities</li><li>Handle archival garments from the Cornell Fashion + Textile Collection</li></ul></li>
+      <li class="xp"><div class="xp-top"><span class="tag">Leadership</span><span class="when">Ithaca · Nov 2025 – Present</span></div>
+        <h3>Human Ecology Office of Admissions</h3><p class="role">Ambassador & Steering Committee</p>
+        <ul><li>Help lead a team of 40+ student ambassadors: engagement, training and development</li><li>Plan events and social media initiatives for prospective students</li></ul></li>
+    </ol>
+    <canvas class="stitch" aria-hidden="true" style="margin:clamp(40px,6vw,64px) 0 0"></canvas>
+    <div class="intro">
+      <h2>projects</h2>
+      <p>Brand, trend and product projects, each framed around the customer, the assortment and the business decisions behind it. Click a project to see the full case.</p>
     </div>
     <ol class="peeks" id="peeks"></ol>
   </div>
@@ -404,6 +455,14 @@ const P=[
         ["Make","Built the garment through fittings.","img/peek-editorial-color.jpg",""],
         ["Shoot","Styled and shot with the full group on location.",null,"behind the scenes"]]}
 ];
+const X=[
+{id:"saint-tropez",title:"Saint-Tropez Proposal",short:"Saint-Tropez",cat:"Client proposal · Damonte & Lacarrieu",year:"2026",peek:"img/peek-dl.jpg",
+ meta:[["Firm","Damonte & Lacarrieu, Paris"],["Role","Merchandising Intern: built the presentation boards"],["Tools","Adobe InDesign"]],
+ lede:"A room-by-room furnishing proposal for a private client's home in Saint-Tropez, created during my merchandising internship at Damonte & Lacarrieu. I built the presentation boards in InDesign, laying out each room's selections so the client could review fabrics, lighting, furniture and rugs together.",
+ lens:[["Client deliverable","A real client proposal covering the dining room, kitchen, living room and two bedrooms."],["Assortment","24 numbered selections across fabrics, lighting, furniture and rugs, each keyed to the product list."],["Brand consistency","One Mediterranean story throughout: sage green, rattan, ivory linen and blue stripes."],["Process","The proposal went through five dated versions between April and May 2026."]],
+ gallery:{cls:"g2",items:[{src:"img/dl-3.jpg",alt:"Dining room inspiration with sage green arched shelving and striped fabric swatches",cap:"dining room · direction + fabrics"},{src:"img/dl-4.jpg",alt:"Line drawing of arched built-in shelving",cap:"dining room · shelving elevation"},{src:"img/dl-5.jpg",alt:"Rattan wall lamps, rattan dining table and chair with floral fabric swatches",cap:"dining room · lighting, table, chairs"},{src:"img/dl-6.jpg",alt:"Ivory linen sofa with fabric swatches",cap:"living room · sofa + fabrics"},{src:"img/dl-9.jpg",alt:"Blue ikat rug, rattan pendant, lamp and blue stripe fabric",cap:"blue bedroom"},{src:"img/dl-10.jpg",alt:"Ceiling light and rattan table lamp",cap:"second bedroom · lighting"}]},
+ steps:[]}
+];
 
 // clover motif: soft airbrushed oval with a clover left in negative space
 function drawClover(cv){
@@ -459,35 +518,35 @@ document.getElementById('peeks').innerHTML=P.map((p,i)=>`
   <span class="more">${p.cat.toLowerCase()} · see the work →</span>
 </a></li>`).join('');
 
-function renderProject(i){
-  const p=P[i],prev=P[(i+P.length-1)%P.length],next=P[(i+1)%P.length];
+function renderProject(i,extra){
+  const p=extra?X[i]:P[i],prev=P[(i+P.length-1)%P.length],next=P[(i+1)%P.length];
   const g=p.gallery.items.map(it=>`<figure class="${it.tall?'tall':''}"><button type="button" data-full="${it.src}" aria-label="Enlarge"><img src="${it.src}" alt="${it.alt}"></button>${it.cap?`<figcaption>${it.cap}</figcaption>`:''}</figure>`).join('');
   const s=p.steps.map((st,k)=>`<li class="step"><span class="n">${k+1}</span><div><h3>${st[0]}</h3><p>${st[1]}</p></div>${st[2]?`<figure><button type="button" data-full="${st[2]}" aria-label="Enlarge"><img src="${st[2]}" alt="${st[0]} detail"></button></figure>`:`<div class="ph">add photo:<br>${st[3]}</div>`}</li>`).join('');
   document.getElementById('proj').innerHTML=`
   <header class="proj-head">
-    <a class="back" href="#work">← all work</a>
-    <div class="row"><span class="label">no. ${String(i+1).padStart(2,'0')}</span><span class="label">${p.cat}</span><span class="label">${p.year}</span></div>
+    <a class="back" href="#work">${extra?'← back to experience':'← all work'}</a>
+    <div class="row"><span class="label">${extra?'experience':'no. '+String(i+1).padStart(2,'0')}</span><span class="label">${p.cat}</span><span class="label">${p.year}</span></div>
     <h1>${p.title}</h1>
+    ${p.lens?`<section class="case" aria-label="The business case"><h2>the business case</h2><dl>${p.lens.map(l=>`<div><dt>${l[0]}</dt><dd>${l[1]}</dd></div>`).join('')}</dl></section>`:''}
     <div class="lede"><p>${p.lede}</p><dl>${p.meta.map(m=>`<dt>${m[0]}</dt><dd>${m[1]}</dd>`).join('')}</dl></div>
   </header>
-  ${p.lens?`<aside class="lens" aria-label="Merchandising lens"><dl>${p.lens.map(l=>`<div><dt>${l[0]}</dt><dd>${l[1]}</dd></div>`).join('')}</dl></aside>`:''}
   <canvas class="stitch" aria-hidden="true" style="margin-top:28px"></canvas>
-  <div class="block-title"><canvas class="clover" data-c="#B9CC8E,#E2E8B8" data-k="4" style="width:30px" aria-hidden="true"></canvas><h2>the work</h2><span></span></div>
+  <div class="block-title"><canvas class="clover" data-c="#B9CC8E,#E2E8B8" data-k="4" style="width:30px" aria-hidden="true"></canvas><h2>supporting visuals</h2><span></span></div>
   <div class="gallery ${p.gallery.cls}">${g}</div>
 
-  <nav class="pager" aria-label="More projects">
+  ${extra?'':`<nav class="pager" aria-label="More projects">
     <a href="#${prev.id}"><span class="label">← previous</span><span class="t">${prev.title}</span></a>
     <a href="#${next.id}"><span class="label">next →</span><span class="t">${next.title}</span></a>
-  </nav>`;
+  </nav>`}`;
   document.title=p.title+' · Chloe Nayeon Cho';
   document.querySelectorAll('#proj canvas.clover').forEach(drawClover);
 }
 
 function route(){
   const h=location.hash.slice(1);
-  const pi=P.findIndex(p=>p.id===h);
-  const v=pi>=0?'project':h==='about'?'about':h==='work'?'work':'home';
-  if(pi>=0) renderProject(pi); else document.title='Chloe Nayeon Cho Portfolio';
+  const pi=P.findIndex(p=>p.id===h);const xi=X.findIndex(p=>p.id===h);
+  const v=(pi>=0||xi>=0)?'project':h==='about'?'about':h==='work'?'work':'home';
+  if(pi>=0) renderProject(pi); else if(xi>=0) renderProject(xi,true); else document.title='Chloe Nayeon Cho Portfolio';
   document.querySelectorAll('.view').forEach(el=>el.hidden=el.dataset.view!==v);
   document.querySelectorAll('[data-nav]').forEach(a=>a.dataset.nav===v?a.setAttribute('aria-current','page'):a.removeAttribute('aria-current'));
   drawStitches();
